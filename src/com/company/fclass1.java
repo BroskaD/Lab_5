@@ -2,16 +2,24 @@ package com.company;
 
 public class fclass1 {
 
-    protected static int a = 3;
+    private static int a;
+
+    public int getA(){
+        return a;
+    }
+
+    public void setA(int b) {
+        this.a = b;
+    }
+
+    public static void methodOfFclass1(){
+        System.out.println("Метод первого класса");
+    }
 
     public static void main(String[] args) {
         fclass2.methodOfFclass2();
         fclass3.methodOfFclass1();
         fclass3.methodOfFclass3();
-        System.out.println("В этой программе " + fclass2.outputVariable() + " класса");
+        fclass2.outputVariable();
     }
-
-     public static void methodOfFclass1(){
-         System.out.println("Метод первого класса");
-     }
 }
